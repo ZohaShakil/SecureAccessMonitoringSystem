@@ -10,19 +10,24 @@ FeatureDescription🔐 RBAC4-tier role hierarchy (Admin, Commander, Officer, Sol
 🗂️ Project Structure
 SecureAccessMonitoringSystem/
 ├── src/main/java/
+
 │   ├── Main.java                    # Entry point
+
 │   ├── database/                    # Database layer
+
 │   │   ├── DatabaseConnection.java
 │   │   ├── UserDAO.java
 │   │   ├── SessionDAO.java
 │   │   ├── ActivityLogDAO.java
 │   │   └── AlertDAO.java
 │   ├── models/                      # Data models
+
 │   │   ├── User.java
 │   │   ├── Session.java
 │   │   ├── ActivityLog.java
 │   │   └── Alert.java
 │   ├── ui/                          # User Interface
+
 │   │   ├── LoginFrame.java
 │   │   ├── DashboardFrame.java
 │   │   ├── AdminFrame.java
@@ -30,6 +35,7 @@ SecureAccessMonitoringSystem/
 │   │   ├── SessionViewerFrame.java
 │   │   └── AlertViewerFrame.java
 │   ├── security/                    # Security features
+
 │   │   ├── SessionMonitor.java
 │   │   ├── AnomalyDetector.java
 │   │   ├── RBACManager.java
@@ -39,7 +45,9 @@ SecureAccessMonitoringSystem/
 │   └── utils/
 │       └── UIHelper.java
 ├── pom.xml                          # Maven configuration
+
 └── audit_log.txt                    # Audit logs
+
 
 👤 Role-Based Access Control
 UsernamePasswordRolePermissionsadminadmin123AdminFull access — all commands, audit logs, user managementcommander1pass123CommanderView data, issue commands, access classifiedofficer1pass123OfficerView data, limited classified accesssoldier1pass123SoldierView data only
@@ -75,10 +83,16 @@ Run Main.java
 🔐 Security Features
 
 ✅ BCrypt password hashing — passwords never stored in plaintext
+
 ✅ Session monitoring — auto-timeout on inactivity
+
 ✅ Failed login tracking — max 5 attempts before lockout
+
 ✅ RBAC enforcement — unauthorized commands blocked and alerted
+
 ✅ Anomaly detection — flags abnormal access timing (e.g. 3 AM logins)
+
+
 ✅ Full audit logging — every login, command, and alert recorded
 
 
